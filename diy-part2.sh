@@ -19,7 +19,6 @@ cd ~/openwrt/package/feeds/helloworld
 ln -s ../../../feeds/helloworld/shadowsocksr-libev/shadowsocksr-libev
 
 sed -i "/helloworld/d" "feeds.conf.default"
-./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds update -a
 ./scripts/feeds update -a
