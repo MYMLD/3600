@@ -16,6 +16,8 @@
 sed -i "/helloworld/d" "feeds.conf.default"
 ./scripts/feeds clean
 ./scripts/feeds update -a
+./scripts/feeds update -a
+./scripts/feeds update -a
 ./scripts/feeds install -a
 
 # Modify default IP
