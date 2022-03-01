@@ -15,6 +15,9 @@
 ./scripts/feeds update helloworld
 ./scripts/feeds install -a -f -p helloworld
 
+cd ~/openwrt/package/feeds/helloworld
+ln -s ../../../feeds/helloworld/shadowsocksr-libev/shadowsocksr-libev
+
 sed -i "/helloworld/d" "feeds.conf.default"
 ./scripts/feeds clean
 ./scripts/feeds update -a
