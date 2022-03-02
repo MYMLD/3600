@@ -10,19 +10,16 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-./scripts/feeds update helloworld
-./scripts/feeds update helloworld
+sed -i "/helloworld/d" "feeds.conf.default"
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+
 ./scripts/feeds update helloworld
 ./scripts/feeds install -a -f -p helloworld
 
-cd ~/openwrt/package/feeds/helloworld
-ln -s ../../../feeds/helloworld/shadowsocksr-libev/shadowsocksr-libev
+rm -rf package/helloworld
+git submodule add -f --name helloworld https://github.com/fw876/helloworld.git package/helloworld
 
-sed -i "/helloworld/d" "feeds.conf.default"
-./scripts/feeds update -a
-./scripts/feeds update -a
-./scripts/feeds update -a
-./scripts/feeds install -a
+git submodule update --remote package/helloworld
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
