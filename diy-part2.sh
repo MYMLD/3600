@@ -9,12 +9,6 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
-svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
-
-sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
-sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
-
 
 sed -i "/helloworld/d" "feeds.conf.default"
 echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
