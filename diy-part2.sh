@@ -9,17 +9,11 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-
-sed -i "/helloworld/d" "feeds.conf.default"
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
-
-./scripts/feeds update helloworld
-./scripts/feeds install -a -f -p helloworld
-
 rm -rf package/helloworld
-git submodule add -f --name helloworld https://github.com/fw876/helloworld.git package/helloworld
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
-git submodule update --remote package/helloworld
+git -C package/helloworld pull
+
 
 
 
