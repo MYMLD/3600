@@ -15,6 +15,13 @@ git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 git -C package/helloworld pull
 
 
+mkdir -p package/helloworld
+for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
+  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
+done
+
+tools-y += ucl upx
+$(curdir)/upx/compile := $(curdir)/ucl/compile
 
 
 # Modify default IP
