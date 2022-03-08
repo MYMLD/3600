@@ -15,16 +15,16 @@ git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 git -C package/helloworld pull
 
 
-mkdir -p package/helloworld
-for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
-  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
+# mkdir -p package/helloworld
+# for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
+#  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
 done
 
-svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
-svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
+# svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
+# svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
 
-sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
-sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
+# sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
+# sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
 
 rm -rf ./tmp
 ./scripts/feeds update -a && ./scripts/feeds install -a
