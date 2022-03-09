@@ -20,11 +20,11 @@ git -C package/helloworld pull
  svn checkout "https://github.com/immortalwrt/packages/tree/master/net $i " "package/helloworld/$i"; \
 done
 
-# svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/ucl tools/ucl
-# svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/upx tools/upx
+svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/ucl tools/ucl
+svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/upx tools/upx
 
-# sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
-# sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
+sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
+sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
 
 rm -rf ./tmp
 ./scripts/feeds update -a && ./scripts/feeds install -a
