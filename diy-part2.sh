@@ -14,12 +14,6 @@
 
 git -C package/helloworld pull
 
-
- mkdir -p package/helloworld
- for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
- svn checkout "https://github.com/immortalwrt/packages/tree/master/net $i " "package/helloworld/$i"; \
-done
-
 svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/ucl tools/ucl
 svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/upx tools/upx
 
