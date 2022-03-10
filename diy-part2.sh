@@ -9,10 +9,6 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
- rm -rf package/helloworld
- git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
-
-git -C package/helloworld pull
 
 
 # Modify default IP
