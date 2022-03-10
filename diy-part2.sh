@@ -14,15 +14,6 @@
 
 git -C package/helloworld pull
 
-svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/ucl tools/ucl
-svn checkout https://github.com/coolsnowwolf/lede/tree/master/tools/upx tools/upx
-
-sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
-sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
-
-rm -rf ./tmp
-./scripts/feeds update -a && ./scripts/feeds install -a
-
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
