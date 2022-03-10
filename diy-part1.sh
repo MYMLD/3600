@@ -11,7 +11,7 @@
 #
 
 echo "src-git small https://github.com/kenzok8/small >> "feeds.conf.default"
-
+echo "src-git openwrt-packag https://github.com/MYMLD/openwrt-packag >> "feeds.conf.default"
 
 mkdir -p package/helloworld
 for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
