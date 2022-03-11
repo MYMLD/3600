@@ -17,7 +17,7 @@ git -C package/helloworld pull
 #git clone --depth=1 https://github.com/kenzok8/small.git package/small
 #git -C package/small pull
 
-git  clone --depth=1 openwrt-packag https://github.com/MYMLD/openwrt-packag.git package/openwrt-packag
+git  clone --depth=1 https://github.com/MYMLD/openwrt-packag.git package/openwrt-packag
 git -C package/openwrt-packag pull
 
 # Modify default IP
