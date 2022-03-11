@@ -10,8 +10,8 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-echo "src-git small https://github.com/kenzok8/small.git" >> "feeds.conf.default"
-echo "src-git openwrt-packag https://github.com/MYMLD/openwrt-packag.git" >> "feeds.conf.default"
+#echo "src-git small https://github.com/kenzok8/small.git" >> "feeds.conf.default"
+#echo "src-git openwrt-packag https://github.com/MYMLD/openwrt-packag.git" >> "feeds.conf.default"
 
 mkdir -p package/helloworld
 for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
