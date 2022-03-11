@@ -14,7 +14,7 @@ rm -rf package/helloworld
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 git -C package/helloworld pull
 
-git clone --depth=1 https://github.com/kenzok8/small.git package
+git clone --depth=1 https://github.com/kenzok8/small.git package/small
 git -C package/small pull
 
 #git  clone --depth=1 openwrt-packag https://github.com/MYMLD/openwrt-packag.git package
