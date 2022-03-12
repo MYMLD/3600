@@ -13,10 +13,8 @@
 #echo "src-git small https://github.com/kenzok8/small.git" >> "feeds.conf.default"
 #echo "src-git openwrt-packag https://github.com/MYMLD/openwrt-packag.git" >> "feeds.conf.default"
 
-mkdir -p package/helloworld
-for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
-  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
-done
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 # Uncomment a feed source
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
