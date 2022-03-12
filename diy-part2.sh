@@ -14,11 +14,11 @@ rm -rf package/helloworld
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 git -C package/helloworld pull
 
-#git clone --depth=1 https://github.com/kenzok8/small.git package/small
+git clone --depth=1 https://github.com/kenzok8/small.git package/helloworld
 #git -C package/small pull
 
-git  clone --depth=1 https://github.com/MYMLD/openwrt-packag.git package/openwrt-packag
-git -C package/openwrt-packag pull
+#git  clone --depth=1 https://github.com/MYMLD/openwrt-packag.git package/openwrt-packag
+#git -C package/openwrt-packag pull
 
 svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
 svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
