@@ -17,7 +17,7 @@
 git clone --depth=1 https://github.com/kenzok8/small.git package/smal
 #git -C package/small pull
 
-cd openwrt/package
+
 git clone https://github.com/kenzok8/openwrt-packages.git
 git clone https://github.com/kenzok8/small.git
 ./scripts/feeds update -a
