@@ -14,14 +14,14 @@
 #git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 #git -C package/helloworld pull
 
-git clone --depth=1 https://github.com/kenzok8/small.git package/smal
+#git clone --depth=1 https://github.com/kenzok8/small.git package/smal
 #git -C package/small pull
 
 
-git clone https://github.com/kenzok8/openwrt-packages.git
-git clone https://github.com/kenzok8/small.git
-./scripts/feeds update -a
-./scripts/feeds install -a
+#git clone https://github.com/kenzok8/openwrt-packages.git
+#git clone https://github.com/kenzok8/small.git
+#./scripts/feeds update -a
+#./scripts/feeds install -a
 
 #git  clone --depth=1 https://github.com/MYMLD/openwrt-packag.git package/openwrt-packag
 #git -C package/openwrt-packag pull
