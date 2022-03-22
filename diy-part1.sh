@@ -13,8 +13,8 @@
 #echo "src-git small https://github.com/kenzok8/small.git" >> "feeds.conf.default"
 #echo "src-git openwrt-packag https://github.com/MYMLD/openwrt-packag.git" >> "feeds.conf.default"
 
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 # Uncomment a feed source
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
